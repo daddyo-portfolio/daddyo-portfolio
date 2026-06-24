@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daddyo Graphics Design & Web Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-indigo-600">Daddyo Graphics</h1>
+            <nav class="space-x-6">
+                <a href="#hero" class="hover:text-indigo-600 font-medium">Home</a>
+                <a href="#portfolio" class="hover:text-indigo-600 font-medium">Portfolio</a>
+                <a href="#about" class="hover:text-indigo-600 font-medium">About</a>
+                <a href="#contact" class="hover:text-indigo-600 font-medium">Order Form</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="max-w-6xl mx-auto px-4 py-20 text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">
+            Hi, I'm <span class="text-indigo-600">Shuaibu Abdulkarim</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+            Software Engineering Student & Professional Graphic Designer. I bridge the gap between stunning visual design and robust web applications.
+        </p>
+        <a href="#contact" class="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700 transition">
+            Hire Me / Order Design
+        </a>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section id="portfolio" class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-2xl font-bold text-center mb-12">My Design Showcase</h3>
+            
+            <!-- Grid Layout for Portfolio Items -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Item 1 (Placeholder) -->
+                <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
+                        <img src="images/logo.jpg" alt="Daddyo Logo Design" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg">Brand Logo Design</h4>
+                        <p class="text-sm text-gray-500">Modern identity design for local businesses.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 (Placeholder) -->
+                <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
+                        <img src="images/flyer.jpg" alt="Daddyo Logo Design" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg">Event Flyer</h4>
+                        <p class="text-sm text-gray-500">Premium digital marketing materials.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 (Placeholder) -->
+                <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
+                        <img src="images/restoration.jpg" alt="Daddyo Logo Design" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg">Digital Restoration</h4>
+                        <p class="text-sm text-gray-500">Enhancing and repairing vintage photographs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+        <p>&copy; 2026 Daddyo Graphics Design. Built with Node.js & Tailwind.</p>
+    </footer>
+<section id="contact" class="bg-gray-100 py-16">
+    <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Place a Design Order</h3>
+        
+        <form action="/submit-order" method="POST" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Your Name</label>
+                <input type="text" name="clientName" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Design Type</label>
+                <select name="designType" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    <option value="Logo">Brand Logo Design</option>
+                    <option value="Flyer">Event Flyer / Banner</option>
+                    <option value="Restoration">Photo Restoration</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Project Details</label>
+                <textarea name="projectDetails" rows="4" required placeholder="Describe what you want (colors, text, style)..." class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md font-semibold hover:bg-indigo-700 transition">
+                Submit Order Request
+            </button>
+        </form>
+    </div>
+</section>
+</body>
+</html>
