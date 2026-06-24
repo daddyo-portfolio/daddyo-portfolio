@@ -7,120 +7,259 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-950 text-gray-100 font-sans antialiased scroll-smooth">
 
     <!-- Header / Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-gray-900/90 border-b border-gray-800/80 shadow-sm sticky top-0 z-50 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold text-indigo-600">Daddyo Graphics</h1>
-            <nav class="space-x-6">
-                <a href="#hero" class="hover:text-indigo-600 font-medium">Home</a>
-                <a href="#portfolio" class="hover:text-indigo-600 font-medium">Portfolio</a>
-                <a href="#about" class="hover:text-indigo-600 font-medium">About</a>
-                <a href="#contact" class="hover:text-indigo-600 font-medium">Order Form</a>
+            <h1 class="text-xl font-bold text-indigo-400 tracking-tight">Daddyo Graphics</h1>
+            <nav class="space-x-6 text-sm">
+                <a href="#" class="text-gray-300 hover:text-indigo-400 font-medium transition">Home</a>
+                <a href="#services" class="text-gray-300 hover:text-indigo-400 font-medium transition">Services</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-indigo-400 font-medium transition">Showcase</a>
+                <a href="#order-form" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 py-1.5 rounded-lg font-medium transition shadow-sm">Order Now</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="max-w-6xl mx-auto px-4 py-20 text-center">
-        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">
-            Hi, I'm <span class="text-indigo-600">Shuaibu Abdulkarim</span>
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Software Engineering Student & Professional Graphic Designer. I bridge the gap between stunning visual design and robust web applications.
-        </p>
-        <a href="#contact" class="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700 transition">
-            Hire Me / Order Design
-        </a>
+    <!-- HERO SECTION WITH LIGHTER, CRISPER BACKGROUND OVERLAY -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gray-900 px-4 py-24 text-center">
+        
+        <!-- Sliding Background Track (Vibrant 8-Image Loop) -->
+        <div class="absolute inset-0 z-0 flex w-[800%] h-full animate-[heroSlider_40s_infinite_ease-in-out]">
+            <!-- Pictures 1 to 8 with a lighter, subtle linear-gradient tint -->
+            <div class="w-full h-full bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(17,24,39,0.45), rgba(17,24,39,0.65)), url('/images/design1.jpg');"></div>
+            <div class="w-full h-full bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(17,24,39,0.45), rgba(17,24,39,0.65)), url('/images/design2.jpg');"></div>
+            <div class="w-full h-full bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(17,24,39,0.45), rgba(17,24,39,0.65)), url('/images/design3.jpg');"></div>
+            <div class="w-full h-full bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(17,24,39,0.45), rgba(17,24,39,0.65)), url('/images/design4.jpg');"></div>
+            <div class="w-full h-full bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(17,24,39,0.45), rgba(17,24,39,0.65)), url('/images/design5.jpg');"></div>
+            <div class="w-full h-full bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(17,24,39,0.45), rgba(17,24,39,0.65)), url('/images/design6.jpg');"></div>
+            <div class="w-full h-full bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(17,24,39,0.45), rgba(17,24,39,0.65)), url('/images/design7.jpg');"></div>
+            <div class="w-full h-full bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(17,24,39,0.45), rgba(17,24,39,0.65)), url('/images/design8.jpg');"></div>
+        </div>
+
+        <!-- Transparent Radial Glow to soften the center area -->
+        <div class="absolute inset-0 bg-radial from-transparent via-gray-900/10 to-gray-950/40 z-1"></div>
+
+        <!-- Text Content Area (Safely layered on top) -->
+        <div class="relative z-10 max-w-6xl mx-auto space-y-6 px-4">
+            
+            <!-- FIXED SINGLE LINE HEADLINE -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] whitespace-nowrap">
+                Hi, I'm <span class="text-indigo-400">Shuaibu Abdulkarim</span>
+            </h1>
+            
+            <!-- SUB-TITLE -->
+            <div>
+                <p class="text-xl md:text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+                    Professional Graphic Designer
+                </p>
+            </div>
+            
+            <!-- DESCRIPTION WITH BACKDROP PANEL FOR BETTER LEGIBILITY -->
+            <p class="text-base md:text-lg text-gray-100 max-w-2xl mx-auto font-semibold leading-relaxed bg-gray-950/40 px-6 py-2 rounded-xl backdrop-blur-[2px] inline-block">
+                I bridge the gap between stunning visual design and robust web applications.
+            </p>
+            
+            <div class="pt-4">
+                <a href="#order-form" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/30 hover:shadow-indigo-500/40 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0">
+                    Hire Me / Order Design
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- Portfolio Gallery Section -->
-    <section id="portfolio" class="bg-white py-16">
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-900 text-gray-100 border-t border-gray-800">
         <div class="max-w-6xl mx-auto px-4">
-            <h3 class="text-2xl font-bold text-center mb-12">My Design Showcase</h3>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-2">Our Professional Services</h2>
+                <p class="text-gray-400 max-w-xl mx-auto text-sm">Premium branding, corporate identity development, and custom media solutions tailored for your business.</p>
+                <div class="h-1 w-20 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Category 1 -->
+                <div class="bg-gray-800/40 rounded-2xl border border-gray-700/50 overflow-hidden hover:border-indigo-500/50 transition duration-300 shadow-xl group">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Corporate Branding" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-indigo-400 mb-3 flex items-center gap-2">✨ Identity & Branding</h3>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-center gap-2">🔑 <span class="font-medium">Logo Design</span></li>
+                            <li class="flex items-center gap-2">🎨 <span class="font-medium">Corporate Branding</span></li>
+                            <li class="flex items-center gap-2">🪪 <span class="font-medium">Business ID Cards</span></li>
+                            <li class="flex items-center gap-2">💳 <span class="font-medium">Plastic ID Cards</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="bg-gray-800/40 rounded-2xl border border-gray-700/50 overflow-hidden hover:border-indigo-500/50 transition duration-300 shadow-xl group">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1561070791-26c113006238?auto=format&fit=crop&w=600&q=80" alt="Print Marketing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-purple-400 mb-3 flex items-center gap-2">📢 Marketing & Print</h3>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-center gap-2">🏁 <span class="font-medium">Large Banners</span></li>
+                            <li class="flex items-center gap-2">🖼️ <span class="font-medium">Posters & Flyers</span></li>
+                            <li class="flex items-center gap-2">🏷️ <span class="font-medium">Custom Stickers</span></li>
+                            <li class="flex items-center gap-2">📅 <span class="font-medium">Company Calendars</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="bg-gray-800/40 rounded-2xl border border-gray-700/50 overflow-hidden hover:border-indigo-500/50 transition duration-300 shadow-xl group">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600&q=80" alt="Custom Merchandise" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-pink-400 mb-3 flex items-center gap-2">🎁 Custom Merchandise</h3>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-center gap-2">👕 <span class="font-medium">T-Shirt Customization</span></li>
+                            <li class="flex items-center gap-2">☕ <span class="font-medium">Magic Mugs</span></li>
+                            <li class="flex items-center gap-2">🖊️ <span class="font-medium">Customized Pens</span></li>
+                            <li class="flex items-center gap-2">🔑 <span class="font-medium">Key Holders</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="bg-gray-800/40 rounded-2xl border border-gray-700/50 overflow-hidden hover:border-indigo-500/50 transition duration-300 shadow-xl group">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80" alt="Packaging and Events" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-emerald-400 mb-3 flex items-center gap-2">📦 Packaging & Events</h3>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-center gap-2">✉️ <span class="font-medium">Invitation Cards</span></li>
+                            <li class="flex items-center gap-2">🛍️ <span class="font-medium">Paper, Tissue & Hand Bags</span></li>
+                            <li class="flex items-center gap-2">📦 <span class="font-medium">Luxury Gift Boxes</span></li>
+                            <li class="flex items-center gap-2">🏆 <span class="font-medium">Awards & Certificates</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-indigo-950/20 border border-indigo-500/20 rounded-xl p-4 text-center text-xs text-indigo-300 font-mono">
+                💼 General Contracts, Corporate Memos, Invoices, Cash Receipts, and Photography services available on request.
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Showcase Section -->
+    <section id="portfolio" class="bg-gray-950 py-20 border-t border-gray-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-white mb-2 tracking-tight">My Design Showcase</h3>
+                <p class="text-sm text-gray-400 max-w-md mx-auto">A snapshot of premium mockups and real graphics produced at Daddyo Labs.</p>
+                <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+            </div>
             
-            <!-- Grid Layout for Portfolio Items -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Item 1 (Placeholder) -->
-                <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-                    <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
-                        <img src="images/logo.jpg" alt="Daddyo Logo Design" class="w-full h-48 object-cover">
+                <!-- Item 1 -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden shadow-sm hover:border-indigo-500/40 transition group">
+                    <div class="bg-gray-800 h-48 overflow-hidden">
+                        <img src="images/logo.jpg" alt="Daddyo Logo Design" class="w-full h-full object-cover group-hover:scale-103 transition duration-300">
                     </div>
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg">Brand Logo Design</h4>
-                        <p class="text-sm text-gray-500">Modern identity design for local businesses.</p>
-                    </div>
-                </div>
-
-                <!-- Item 2 (Placeholder) -->
-                <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-                    <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
-                        <img src="images/flyer.jpg" alt="Daddyo Logo Design" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg">Event Flyer</h4>
-                        <p class="text-sm text-gray-500">Premium digital marketing materials.</p>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-white">Brand Logo Design</h4>
+                        <p class="text-sm text-gray-400 mt-1">Modern identity design for local brands and startups.</p>
                     </div>
                 </div>
 
-                <!-- Item 3 (Placeholder) -->
-                <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-                    <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
-                        <img src="images/restoration.jpg" alt="Daddyo Logo Design" class="w-full h-48 object-cover">
+                <!-- Item 2 -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden shadow-sm hover:border-indigo-500/40 transition group">
+                    <div class="bg-gray-800 h-48 overflow-hidden">
+                        <img src="images/flyer.jpg" alt="Daddyo Event Flyer" class="w-full h-full object-cover group-hover:scale-103 transition duration-300">
                     </div>
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg">Digital Restoration</h4>
-                        <p class="text-sm text-gray-500">Enhancing and repairing vintage photographs.</p>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-white">Event Flyer</h4>
+                        <p class="text-sm text-gray-400 mt-1">High-impact premium digital and print promotional materials.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden shadow-sm hover:border-indigo-500/40 transition group">
+                    <div class="bg-gray-800 h-48 overflow-hidden">
+                        <img src="images/restoration.jpg" alt="Photo Restoration" class="w-full h-full object-cover group-hover:scale-103 transition duration-300">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-white">Digital Restoration</h4>
+                        <p class="text-sm text-gray-400 mt-1">Enhancing, repairing, and coloring vintage photographs.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<footer class="border-t border-gray-800/60 bg-gray-950/30 py-6 mt-16">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="text-xs text-gray-500 font-medium">&copy; 2026 Daddyo Graphics. All rights reserved.</p>
-        <a href="/admin/login" class="text-xs text-gray-500 hover:text-indigo-400 font-medium transition-colors duration-200 flex items-center gap-1">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            Management Access
-        </a>
-    </div>
-</footer>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
-        <p>&copy; 2026 Daddyo Graphics Design. Built with Node.js & Tailwind.</p>
-    </footer>
-<section id="contact" class="bg-gray-100 py-16">
-    <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Place a Design Order</h3>
-        
-        <form action="/submit-order" method="POST" class="space-y-4">
-            <div>
-                <label class="block text-sm font-medium text-gray-700">Your Name</label>
-                <input type="text" name="clientName" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-            </div>
+    <!-- Interactive Order Form Section -->
+    <section id="order-form" class="bg-gray-950 py-20 border-t border-gray-900">
+        <div class="max-w-md mx-auto bg-gray-800 border border-gray-700/80 p-8 rounded-2xl shadow-xl">
+            <h3 class="text-2xl font-bold text-white mb-2 text-center">Place a Design Order</h3>
+            <p class="text-xs text-gray-400 text-center mb-6">Select your package framework and provide detailed descriptions.</p>
             
-            <div>
-                <label class="block text-sm font-medium text-gray-700">Design Type</label>
-                <select name="designType" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                    <option value="Logo">Brand Logo Design</option>
-                    <option value="Flyer">Event Flyer / Banner</option>
-                    <option value="Restoration">Photo Restoration</option>
-                </select>
-            </div>
+            <form action="/submit-order" method="POST" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-300">Your Name</label>
+                    <input type="text" name="clientName" required class="mt-1 block w-full p-2.5 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-300">Design Category</label>
+                    <select name="designType" class="mt-1 block w-full p-2.5 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <option value="Logo">Brand Logo Design</option>
+                        <option value="Flyer">Event Flyer / Banner</option>
+                        <option value="Restoration">Photo Restoration</option>
+                        <option value="Merchandise">Custom Apparel / Mug Printing</option>
+                        <option value="Packaging">Luxury Gift Box / Bags</option>
+                        <option value="Stationery">Corporate ID Cards / Calendar</option>
+                    </select>
+                </div>
 
-            <div>
-                <label class="block text-sm font-medium text-gray-700">Project Details</label>
-                <textarea name="projectDetails" rows="4" required placeholder="Describe what you want (colors, text, style)..." class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
-            </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-300">Project Specifications</label>
+                    <textarea name="projectDetails" rows="4" required placeholder="Specify your desired color palettes, text typography, or concepts..." class="mt-1 block w-full p-2.5 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                </div>
 
-            <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md font-semibold hover:bg-indigo-700 transition">
-                Submit Order Request
-            </button>
-        </form>
-    </div>
-</section>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-3 px-4 rounded-lg font-semibold shadow-md transition transform active:scale-[0.99]">
+                    Submit Order Request
+                </button>
+            </form>
+        </div>
+    </section>
+ 
+    <!-- Unified Clean Footer Strip -->
+    <footer class="bg-gray-950 border-t border-gray-900 py-8 text-center text-xs text-gray-500">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Daddyo Graphics Design. Built with Node.js & Tailwind.</p>
+            <a href="/admin/login" class="inline-flex items-center gap-1.5 hover:text-indigo-400 transition font-medium">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                Staff Control Portal
+            </a>
+        </div>
+    </footer>
+
+    <!-- CSS Track Animation Config for 8 Image Cards -->
+    <style>
+    @keyframes heroSlider {
+        0%, 10%      { transform: translateX(0%); }
+        12.5%, 22.5% { transform: translateX(-12.5%); }
+        25%, 35%      { transform: translateX(-25%); }
+        37.5%, 47.5% { transform: translateX(-37.5%); }
+        50%, 60%      { transform: translateX(-50%); }
+        62.5%, 72.5% { transform: translateX(-62.5%); }
+        75%, 85%      { transform: translateX(-75%); }
+        87.5%, 97.5% { transform: translateX(-87.5%); }
+        100%          { transform: translateX(0%); }
+    }
+    </style>
 </body>
 </html>
